@@ -6,6 +6,7 @@ from app.handlers.api.kuriki.biology_2010_to_2011 import (
     KurikiBiologyOutcomesAPIHandler,
     KurikiBiologyUnitsAPIHandler,
 )
+from app.handlers.api.kuriki.computer_science_2004 import KurikiComputerScienceClustersAPIHandler, KurikiComputerScienceGeneralLearningOutcomesAPIHandler, KurikiComputerScienceOutcomesAPIHandler
 from app.handlers.api.kuriki.lessons import KurikiLessonsAPIHandler
 from app.handlers.api.kuriki.mathematics_2013_to_2014 import (
     KurikiMathematicsOutcomesAPIHandler,
@@ -74,6 +75,23 @@ api_routes = [
         r"/api/kuriki/mathematics/2013-2014/strands",
         KurikiMathematicsStrandsAPIHandler,
         name="api_kuriki_math_strands",
+    ),
+    route(
+        r"/api/kuriki/computer_science/2004/outcomes",
+        KurikiComputerScienceOutcomesAPIHandler,
+        name="api_kuriki_computer_science_outcomes",
+    ),
+
+    route(
+        r"/api/kuriki/computer_science/2004/clusters",
+        KurikiComputerScienceClustersAPIHandler,
+        name="api_kuriki_computer_science_clusters",
+    ),
+
+    route(
+        r"/api/kuriki/computer_science/2004/general_learning_outcomes",
+        KurikiComputerScienceGeneralLearningOutcomesAPIHandler,
+        name="api_kuriki_computer_science_general_learning_outcomes",
     ),
     route(
         r"/api/kuriki/science/1999-2000/outcomes",

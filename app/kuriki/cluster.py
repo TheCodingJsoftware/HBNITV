@@ -6,6 +6,7 @@ class Cluster:
     grade: str
     cluster_id: str
     cluster_name: str
+    teacher_notes: str = ""
 
     def get_id(self) -> str:
         return f"{self.grade}.{self.cluster_id}"
